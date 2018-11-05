@@ -19,12 +19,13 @@ class SortedList {
     }
   }
   min() {
+    return(this.length === 0 ? (()=>{throw new Error("EmptySortedList")})() : Math.min(...this.items));
     //this.length === 0 ? throw new Error("EmptySortedList") : return Math.min(...this.items);
-    if (this.length === 0) {
-      throw new Error("EmptySortedList");
-    } else {
-      return Math.min(...this.items);
-    }
+    // if (this.length === 0) {
+    //   throw new Error("EmptySortedList");
+    // } else {
+    //   return Math.min(...this.items);
+    // }
   }
   average() {
     if (this.length === 0) {
